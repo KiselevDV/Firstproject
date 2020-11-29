@@ -22,7 +22,7 @@ from firstapp import views
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', views.home, name='index')
-    # url(r'^test_app/', include('testurlapp.urls'))
+    # url(r'^test_app/', include('testurlapp.urls')),
 ]
 
 if settings.DEBUG:

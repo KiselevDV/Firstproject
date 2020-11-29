@@ -11,16 +11,14 @@
 {#<img src="{% static 'img/pizza.jpg' %}">#}
 <h2>Это страница Index.html</h2>
 <br>
-{% for pizza in pizzas %}
-	<div>
-		<h2>{{ pizza.name }}</h2>
-		{% if pizza.photo %}
-			<img src="{{ pizza.photo.url }}" alt="{{ pizza.name }}">
-		{% endif %}
-		<div>{{ pizza.description }}</div>
-		<div>{{ pizza.price|floatformat:"2" }}</div>
-		<hr>
-	</div>
-{% endfor %}
+<div>
+	<h2>{{ pizza.name }}</h2>
+	{% if pizza.photo %}
+		<img src="{{ pizza.photo.url }}" alt="{{ pizza.name }}">
+	{% endif %}
+	<div>{{ pizza.description }}</div>
+	<div>{{ pizza.price|floatformat:"2" }}</div>
+	<hr>
+</div>
 </body>
 </html>
