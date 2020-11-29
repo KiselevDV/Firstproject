@@ -21,7 +21,8 @@ from firstapp import views
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^$', views.home, name='index')
+    url(r'^$', views.home, name='index'),
+    url(r'^(?P<pizza_id>\d+)', views.pizza_detail, name='pizza_detail'),
     # url(r'^test_app/', include('testurlapp.urls')),
 ]
 

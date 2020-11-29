@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %}
+	Пицца {{ pizza_detail.name }}
+{% endblock %}
+
+{% block page %}
+	<a href="{% url 'index' %}">Главная страница</a>
+	<div>
+		<h2>{{ pizza_detail.name }}</h2>
+		{% if pizza_detail.photo %}
+			<img src="{{ pizza_detail.photo.url }}" alt="{{ pizza_detail.name }}">
+		{% endif %}
+		<div>{{ pizza_detail.description }}</div>
+		<div>{{ pizza_detail.price|floatformat:"2" }}</div>
+	</div>
+{% endblock %}
