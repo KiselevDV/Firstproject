@@ -6,3 +6,5 @@ firstapp/__pycache__/
 firstapp/migrations/__pycache__/
 testurlapp/__pycache__/
 testurlapp/migrations/__pycache__/
+teststaticapp/__pycache__/
+teststaticapp/migrations/__pycache__/

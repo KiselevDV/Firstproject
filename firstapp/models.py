@@ -20,6 +20,8 @@ class Pizza(models.Model):
     """Меню пицц"""
     name = models.CharField(verbose_name='Название пиццы', max_length=30)
     description = models.CharField(verbose_name='Краткое описвние', max_length=50)
+    photo = models.ImageField(
+        verbose_name='Фото', upload_to='firstapp/photos', default='', blank=True)
     price = models.IntegerField(verbose_name='Цена', default=0)
     pizzashop = models.ForeignKey(PizzaShop, verbose_name='Пиццерия', on_delete=models.CASCADE)
 
