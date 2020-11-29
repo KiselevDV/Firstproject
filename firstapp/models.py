@@ -32,3 +32,18 @@ class Pizza(models.Model):
         verbose_name = 'Пицца'
         verbose_name_plural = 'Пиццы'
         ordering = ['name', ]
+
+
+class Order(models.Model):
+    """Заказ пиццы"""
+    pizza = models.ForeignKey(Pizza, verbose_name='Пицца')
+    name = models.CharField(verbose_name='Имя заказчика', max_length=30)
+    phone = models.CharField(verbose_name='Телефон', max_length=30)
+    data = models.DateTimeField(verbose_name='Дата', auto_now_add=True)
+
+    def __str__(self):
+        return self.name
+
+    class Meta:
+        verbose_name = 'Заказ пиццы'
+        verbose_name_plural = 'Заказы пицц'
