@@ -1,5 +1,5 @@
 from django.conf.urls import url
-from testurlapp import views
+from . import views
 
 urlpatterns = [
     # # site.com/user/12

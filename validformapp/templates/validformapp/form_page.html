@@ -6,5 +6,10 @@
 </head>
 <body>
 <h2>Заполните форму</h2>
+<form method="post">
+	{% csrf_token %}
+	{{ form.as_p }}
+	<input type="submit" value="Send">
+</form>
 </body>
 </html>

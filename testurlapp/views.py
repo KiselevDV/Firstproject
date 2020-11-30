@@ -2,7 +2,7 @@ from django.shortcuts import render
 
 
 def home(request, month, year):
-    return render(request, 'index.html', {
+    return render(request, 'testurlapp/index.html', {
         'month': month,
         'year': year,
     })
