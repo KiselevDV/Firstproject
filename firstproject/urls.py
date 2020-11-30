@@ -20,9 +20,11 @@ from django.contrib import admin
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^test_url_app/', include('testurlapp.urls')),
+    url(r'^auth_app/', include('authapp.urls')),
     url(r'^first_app/', include('firstapp.urls')),
-    url(r'^valid_form_app/', include('validformapp.urls'))
+    url(r'^test_url_app/', include('testurlapp.urls')),
+    url(r'^valid_form_app/', include('validformapp.urls')),
+
 ]
 
 if settings.DEBUG:

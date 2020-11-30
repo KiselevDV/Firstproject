@@ -37,8 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'firstapp',
     'testurlapp',
-    'teststaticapp',
     'validformapp',
+    'authapp',
 ]
 
 MIDDLEWARE = [
@@ -123,3 +123,6 @@ STATICFILES_DIRS = [STATIC_DIR]
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+# Переменна указывает URL на которую будет выполнено перенаправление полсле входа на сайт
+LOGIN_REDIRECT_URL = '/auth_app'
