@@ -17,13 +17,11 @@ from django.conf import settings
 from django.conf.urls import url, include
 from django.conf.urls.static import static
 from django.contrib import admin
-from firstapp import views
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^$', views.home, name='index'),
-    url(r'^(?P<pizza_id>\d+)', views.pizza_detail, name='pizza_detail'),
-    # url(r'^test_app/', include('testurlapp.urls')),
+    url(r'^test_url_app/', include('testurlapp.urls')),
+    url(r'^first_app/', include('firstapp.urls')),
 ]
 
 if settings.DEBUG:
