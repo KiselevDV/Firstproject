@@ -14,4 +14,17 @@
 		<div>{{ pizza_detail.description }}</div>
 		<div>{{ pizza_detail.price|floatformat:"2" }}</div>
 	</div>
+	<br>
+	<h2>Заказ</h2>
+	{% if sent %}
+		<h2>Спасибо! Ваша заявка принята!</h2>
+	{% endif %}
+	{#	form отправляет инфу в виде запроса на сервер#}
+	<form method="POST">
+		{#		Загружает базовый шаблон из формы.#}
+		{#		Доп. (для отображения в HTML): as_p, as_ul, as_table#}
+		{% csrf_token %}
+		{{ form.as_p }}
+		<input type="submit" value="Отправить заказ">
+	</form>
 {% endblock %}
