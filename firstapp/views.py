@@ -14,7 +14,7 @@ def pizza_detail(request, pizza_id):
     # Вызов объекта пиццы или ошибка 404
     pizza = get_object_or_404(Pizza, id=pizza_id)
     # Загрузка базовой формы из forms.py
-    # initial - параметр, для присвоения значений полю по умочанию
+    # initial - параметр, для присвоения значений полю по умочанию, поле pizza из модели Order
     # request.POST or None - передаём данные POST запросом если есть!
     form = OrderForm(request.POST or None, initial={'pizza': pizza, })
 
@@ -27,7 +27,7 @@ def pizza_detail(request, pizza_id):
             # HttpResponseRedirect - отвечает за перенапраление
             # После сохранения формы в БД пользователя перенаправят на другую страницу
             # reverse - отвечает за адрес страницы: первый аргумент (pizza_detail) - адрес страницы
-            # второй словарь с данными для "r'^(?P<pizza_id>\d+)'" и посьроения url
+            # второй словарь с данными для "r'^(?P<pizza_id>\d+)'" и построения url
             return HttpResponseRedirect(
                 '{}?sent=True'.format(reverse('pizza_detail', kwargs={'pizza_id': pizza.id})))
         # При ссылке на туже страницу HttpResponseRedirect её просто перезагрузит

@@ -8,6 +8,7 @@
 <h2>Вход</h2>
 <form method="post">
 	{% csrf_token %}
+	{#	form - находится в составе контекста login, шаблон формы входа#}
 	{{ form }}
 	<button type="submit">Выполнить вход</button>
 </form>

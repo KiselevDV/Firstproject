@@ -124,5 +124,8 @@ STATICFILES_DIRS = [STATIC_DIR]
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
-# Переменна указывает URL на которую будет выполнено перенаправление полсле входа на сайт
-LOGIN_REDIRECT_URL = '/auth_app'
+# Переменна указывает URL на которую будет выполнено перенаправление полсле входа на сайт - login
+LOGIN_REDIRECT_URL = '/'
+
+# Переменна указывает URL на которую будет выполнено перенаправление полсле выхода с сайта - logout
+# LOGOUT_REDIRECT_URL = '/'
