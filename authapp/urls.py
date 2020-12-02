@@ -4,6 +4,7 @@ from . import views
 
 urlpatterns = [
     url(r'^$', views.home, name='home'),
+
     # Единая система разграничения доступа для всего сайта
     # Привязываем ф-ию контороллер (auth_views.login) к адресу (r'^login/$')
     # Два необязательных параметра "template_name" - путь к файлу шаблона
@@ -18,4 +19,6 @@ urlpatterns = [
         name='authapp-logout'),
     # URL страницы на которую перенаправит ф-ия "redirect"
     url(r'^authapp/$', views.authapp_home, name='authapp-home'),
+
+    url(r'^authapp/sign-up/$', views.authapp_sign_up, name='authapp-sign-up'),
 ]
