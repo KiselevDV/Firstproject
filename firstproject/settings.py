@@ -66,6 +66,8 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                # Включает процессор который добовляет переменную media со значением MEDIA_URL
+                'django.template.context_processors.media',
             ],
         },
     },

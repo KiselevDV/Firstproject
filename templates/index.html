@@ -2,7 +2,7 @@
 {% block page %}
 	{% for pizza in pizzas %}
 		<div>
-			<h2><a href="{% url 'pizza_detail' pizza_id=pizza.id %}">{{ pizza.name }}</a></h2>
+			<h2><a href="{% url 'pizza-detail' pizza_id=pizza.id %}">{{ pizza.name }}</a></h2>
 			{% if pizza.photo %}
 				<img src="{{ pizza.photo.url }}" alt="{{ pizza.name }}">
 			{% endif %}

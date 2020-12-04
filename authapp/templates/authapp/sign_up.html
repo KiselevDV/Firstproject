@@ -6,7 +6,9 @@
 </head>
 <body>
 <h2>Sign Up</h2>
-<form method="post">
+{#Изменяем метод кодирования файлов по умолчанию (application/x-www-form-urlencoded) на#}
+{#(multipart/form-data) с помощью "enctype". Он лучше подходит для передачи файлов#}
+<form method="post" enctype="multipart/form-data">
 	{% csrf_token %}
 	{{ user_form.as_p }}
 	{{ pizzashop_form.as_p }}
