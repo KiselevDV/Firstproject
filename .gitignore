@@ -1,6 +1,5 @@
 .env/
 .idea/
-db.sqlite3
 __pycache__/
 firstproject/__pycache__/
 firstapp/__pycache__/
@@ -9,4 +8,3 @@ testurlapp/__pycache__/
 testurlapp/migrations/__pycache__/
 teststaticapp/__pycache__/
 teststaticapp/migrations/__pycache__/
-
