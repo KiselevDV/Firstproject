@@ -1,10 +1,5 @@
 .env/
 .idea/
+
 __pycache__/
-firstproject/__pycache__/
-firstapp/__pycache__/
-firstapp/migrations/__pycache__/
-testurlapp/__pycache__/
-testurlapp/migrations/__pycache__/
-teststaticapp/__pycache__/
-teststaticapp/migrations/__pycache__/
+*/__pycache__/
